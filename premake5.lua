@@ -1,16 +1,17 @@
 outputdir = "%{cfg.buildcfg}/%{cfg.system}-%{cfg.architecture}"
 
 includeDir = {}
+includeDir["CLI11"] = "vendor/CLI11/include"
 
 libDir = {}
 
 projectName = "Project"
 
-workspace "ProjectWorkspace" -- ChangeProject
+workspace "takeout" -- ChangeProject
 	location "workspace"
 	architecture "x86_64"
 
-	startproject "Main" -- Change this to what's ever the starting project is 
+	startproject "takeout" -- Change this to what's ever the starting project is 
 
 	configurations{
 		"Debug",
@@ -47,7 +48,7 @@ workspace "ProjectWorkspace" -- ChangeProject
         optimize "On"
         runtime "Release"
 
-project "Main" -- Default Project
+project "takeout" -- Default Project
 	language "C++"
 	cppdialect "C++17"
 	kind "ConsoleApp" -- ConsoleApp / SharedLib
@@ -61,7 +62,8 @@ project "Main" -- Default Project
 	}
 
 	includedirs{
-		"include"
+		"include",
+		includeDir["CLI11"]
 	}
 
 	links{

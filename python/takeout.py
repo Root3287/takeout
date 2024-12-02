@@ -30,12 +30,12 @@ wage = args.wage # float(input("What is your hourly wage?"))
 
 if working == True and ((takeout_price - grocery_price) < ((time_to_cook - time_to_order) * wage)):
     if args.batch == True:
-        print(f"{args.wage},{args.takeout_price},{args.grocery_price},{args.cooking_time},{args.order_time},Takeout")
+        print(f"{args.wage}, {args.takeout_price}, {args.grocery_price}, {args.cooking_time}, {args.order_time}, Takeout")
     else:
         print("Takeout")
 else:
     if args.batch == True:
-        print(f"{args.wage},{args.takeout_price},{args.grocery_price},{args.cooking_time},{args.order_time},Cook")
+        print(f"{args.wage}, {args.takeout_price}, {args.grocery_price}, {args.cooking_time}, {args.order_time}, Cook")
     else:
         print("Cook yourself")
 
