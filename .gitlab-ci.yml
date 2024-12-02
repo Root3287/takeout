@@ -32,4 +32,5 @@ build:
 test:
   stage: test
   script:
-    - ./bin/Dist/linux-x86_64/Main
+    - ./bin/Dist/linux-x86_64/takeout -w 0 -t 30 -g 10 -c 30 -o 10
+    - ./bin/Dist/linux-x86_64/takeout -w 30 -t 30 -g 10 -c 30 -o 10
